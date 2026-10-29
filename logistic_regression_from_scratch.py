@@ -130,7 +130,7 @@ predictions = Predict(x_test , final_m , final_c)
 
 accuracy = np.mean(predictions == y_test) * 100
 
-print(f"Model accuracy on data : {accuracy:.2f}")
+print(f"Model accuracy on data : {accuracy:.2f}%")
 
 #-----------------------------------------------------------------------------------------------
 
@@ -163,9 +163,13 @@ precision = ((cm[1][1])/(cm[1][1] + cm[0][1])) * 100
 
 recall = ((cm[1][1])/(cm[1][1] + cm[1][0])) * 100
 
+specificity = ((cm[0][0])/(cm[0][0] + cm[0][1])) * 100
+
 print(f"Precision = {precision:.2f}%" )
 
-print(f"Recall : {recall:.2f}%")
+print(f"Recall = {recall:.2f}%")
+
+print(f"Specificity = {specificity:.2f}%")
 
 #-----------------------------------------------------------------------------------------------
 
